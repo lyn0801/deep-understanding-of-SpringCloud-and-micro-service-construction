@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.boblyn</groupId>
+    <artifactId>deep-understanding-of-SpringCloud-and-micro-service-construction</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <modules>
+        <module>chapter5</module>
+        <module>chapter6</module>
+        <module>chapter7</module>
+        <module>chapter8</module>
+        <module>chapter9</module>
+        <module>chapter10</module>
+        <module>chapter11</module>
+        <module>chapter12</module>
+        <module>chapter13</module>
+        <module>chapter14</module>
+        <module>chapter15</module>
+        <module>chapter16</module>
+    </modules>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

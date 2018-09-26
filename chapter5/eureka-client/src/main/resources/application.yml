@@ -1,0 +1,11 @@
+## YAML Template.
+---
+server:
+    port: 8763
+spring:
+    application:
+        name: eureka-client
+eureka:
+    client:
+        serviceURL:
+            defaultZone: http://peer1:8761/eureka

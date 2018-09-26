@@ -1,0 +1,59 @@
+## YAML Template.
+---
+server:
+    port: 8769
+spring:
+    application:
+        name: config-server
+#    profiles:
+#        active: native
+    cloud:
+        config:
+            server:
+#                native:
+#                    search-locations: classpath:/shared
+                git:
+                    uri: https://github.com/lyn0801/SpringcloudConfig/
+#                    uri: git@github.com:lyn0801/SpringcloudConfig.git
+                    searchPaths: config
+                    username: liuyanan
+                    password:
+                    force-pull: true
+#                    ignoreLocalSshSettings: true
+#                    hostKey: someHostKey
+#                    hostKeyAlgorithm: ssh-rsa
+#                    privateKey: |
+#                                -----BEGIN RSA PRIVATE KEY-----
+#                                MIIEpAIBAAKCAQEAp45knUYUn8P5OClH3td569xqvxm9L1jaKaFaO9fgMf9a6xog
+#                                GLFFxMf8FFaHZjaDmpqx8qkkpU4Wohpk6GBbIXzbm74+0KKMBTXf/r4dpOH+DoQF
+#                                uhihh547FHRNGt/cmZ51AVgfJ/4qnSh2UGhzM2xDdS+V7GQxDT5ur1v9UCgTmhMr
+#                                lm43aFVYYYZdBY38n6fV4E9pSfNUZrkRMieheVgcLGcwqSOxeUrRHoT4rzHeSNEB
+#                                N+ZVtt87uIoZ3VL5lTAMjAEJgIMB63ceK6zmVZneUm4UWwdfeNLYYJ2mCykaNk+l
+#                                qi9hLhG0phfTxP8g3xpjHwvC0kwPuNS2rRvtbQIDAQABAoIBAGp0V4xsyBGxixeZ
+#                                cqYsNLQbuF5t1frM8t7cOt4mi7R4TqVsVdQaXP9nJ8ssJp5UKE0D1+cae8Pi1xJq
+#                                vo29GmkuUMCkoHghreBpmETbOS5Wvvkt/A1+NLJbX6HhOlPGwvt+50vRVworu5tZ
+#                                58Gyeu7C7CD5+MDV7yxA7EXRpiFULdIe6/HwOueMPHPRdVgg6FmncWF96IsjAOaQ
+#                                1xyNcWtDyAjFPJEmi6MwtmI4RbjVRtB/1F/iXf0bbtzRT3718S7ELg0vJpXrTpJe
+#                                BDXyH0k6po1ClhzMPYuuLurgIehhxC9PvWzwYQBG+r7Zv/x2P39z+FXwObGtTxV9
+#                                lDt2QCkCgYEA0+zyKPIpZDPLNkFxD21HvXAeTIbm+dhyCZ5foCKIntiU2OQ6ja3X
+#                                PUTBv+TWzdmOWZBe130e0agZoke3ZT/sBIuj4Zdmstwr/gSk+LjwlL+DATbpVven
+#                                nkgKKBSyyKpnIqfR3MyiSaax/UaETiu3QgEwfbnTaokY4il6xE6KImMCgYEAymcx
+#                                xR4AsowVV24d+i2dBR5Mg98fwDAUD/vMowmd9xoSfkPAiuP3Jgakk7v1Ea50wdXU
+#                                nYoX1ky2c0iDoyodMJjUbdb/d0hQWPh2crHdFMjGlNqiqTOAcuZE4RUX5uFFHhlx
+#                                GjoYcrP5KFRlTn88Q1GHOwdL2WyIpV8rdJ6R0e8CgYEAniwRKYJkZkdJ+nqpecwk
+#                                aT2PP6rIJd3ob0lnMcvUkEox/heJpEkFhtMUkLappAYmeq6IOulF4VFHoJlKRiWJ
+#                                cHMQo8Uuf3xY0USCJKlT1pGBo5xqV+CLmFVIT1XzglW8mF8NAXEyByqFWfYRtY5n
+#                                PrpIiO3y32bnzZUL7gx4iOUCgYEAonYKYOogLTB7wN3GehU6v+z+BauG1MDCmcHH
+#                                E+aYQMtQpMDFP7aTnpYea+amYzbgyOVV7830LDMPD6HY55LaMzO47yFvlNMaiw+E
+#                                I7PYfOJbYwfLIH0SUSe7id9gfBW9YNeTDTYsgYUsLM7xMfy25mH+ZccJfs+7LuIh
+#                                A050RUkCgYB/2dmhvkIbviQ8ae+nEkh+uLMgMs5rThRQ5SaVh6mVQhlvfDrdFukZ
+#                                F1Vw0OM6ezJ75cHXagWMCIVnV9EAnp0VJnXSuVTNVL9gBPYOyHbyzHz/WVo5cGN1
+#                                k+W9jYBqiyN1lZ9M6MBtVzXnvR+aLuTL376DhzjyS0z9tWw2/pvaUQ==
+#                                -----END RSA PRIVATE KEY-----
+            label:
+                master
+eureka:
+    client:
+        serviceURI:
+            defaultZone: http://localhost:8761/eureka
+                    

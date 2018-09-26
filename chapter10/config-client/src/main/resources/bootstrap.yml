@@ -1,0 +1,30 @@
+## YAML Template.
+---
+server:
+    port: 8762
+spring:
+    application:
+        name: config-client
+#    profiles:
+#        active: dev
+    cloud:
+        config:
+            profile: dev
+            label: master
+            uri: http://localhost:8769
+            fail-fast: true
+            discovery:
+                serviceId: config-server
+                enabled: true
+    rabbitmq:
+        host: localhost
+        port: 5672
+        username: guest
+        password: guest
+management:
+    security:
+        enabled: false    
+eureka:
+    client:
+        serviceURI:
+            defaultZone: http://localhost:8761/eureka
