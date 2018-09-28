@@ -16,10 +16,14 @@
 ## 第10章 配置中心Spring Cloud Config
 ### http://localhost:8762/hi
 ### http://localhost:8763/hi
+### http://localhost:15672
 ### http://localhost:8762/bus/refresh
 ## 第11章 服务链路追踪Spring Cloud Sleuth
 ### http://localhost:9411
 ### http://localhost:5000/user-api/user/hi
+### http://localhost:15672
+### http://localhost:9200
+### http://localhost:5601
 ## 第12章 微服务监控Spring Boot Admin
 ## 第13章 Spring Boot Security 详解
 ## 第14章 使用Spring Cloud 0Auth2保护微服务系统

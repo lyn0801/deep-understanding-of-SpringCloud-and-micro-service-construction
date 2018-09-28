@@ -8,4 +8,9 @@
     </parent>
     <artifactId>chapter12</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>12-1</module>
+        <module>12-2</module>
+        <module>12-3</module>
+    </modules>
 </project>

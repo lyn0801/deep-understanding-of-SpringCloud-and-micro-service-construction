@@ -8,4 +8,5 @@
     </parent>
     <artifactId>sleuth-mysql</artifactId>
     <packaging>pom</packaging>
+    <modules></modules>
 </project>

@@ -8,8 +8,5 @@
     </parent>
     <artifactId>chapter8</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>eureka-ribbon-client</module>
-        <module>eureka-feign-client</module>
-    </modules>
+    <modules></modules>
 </project>
