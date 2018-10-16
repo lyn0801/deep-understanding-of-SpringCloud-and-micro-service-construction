@@ -6,7 +6,7 @@
 	<groupId>com.lyn0801</groupId>
 	<artifactId>security</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>security</name>
 	<description>Demo project for Spring Boot</description>
@@ -34,9 +34,22 @@
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-web</artifactId>
-		</dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-web</artifactId>
+                        <!--添加移除内嵌的tomcat模块-->
+                        <exclusions>
+                            <exclusion>
+                                  <groupId>org.springframework.boot</groupId>
+                                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                            </exclusion>
+                            </exclusions>
+                </dependency>
+                <!--添加移除内嵌的tomcat模块-->
+                <dependency>
+                      <groupId>org.apache.tomcat</groupId>
+                      <artifactId>tomcat-servlet-api</artifactId>
+                      <version>8.0.39</version>
+                </dependency>
 
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
@@ -59,14 +72,29 @@
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
+                
+                <dependency>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-starter-tomcat</artifactId>
+                        <!-- provided 表明该包只在编译和测试的时候使用，去除默认的tomcat -->
+                        <scope>provided</scope>
+                </dependency>
 	</dependencies>
 
 	<build>
 		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-			</plugin>
+                    <plugin>
+                        <groupId>org.springframework.boot</groupId>
+                        <artifactId>spring-boot-maven-plugin</artifactId>
+                    </plugin> 
+                    <plugin>  
+                            <groupId>org.apache.maven.plugins</groupId>  
+                            <artifactId>maven-war-plugin</artifactId>  
+                            <configuration>  
+                                <warSourceExcludes>src/main/resources/**</warSourceExcludes>  
+                                <warName>ROOT</warName>  
+                            </configuration>  
+                    </plugin>
 		</plugins>
 	</build>
 
