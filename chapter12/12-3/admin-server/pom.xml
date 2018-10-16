@@ -71,12 +71,6 @@
         </dependency>
         <dependency>
             <groupId>de.codecentric</groupId>
-            <artifactId>spring-boot-admin-server</artifactId>
-            <version>1.5.1</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-server-ui-login</artifactId>
             <version>1.5.0</version>
         </dependency>

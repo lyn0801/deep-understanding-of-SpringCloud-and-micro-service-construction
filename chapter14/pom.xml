@@ -8,4 +8,7 @@
     </parent>
     <artifactId>chapter14</artifactId>
     <packaging>pom</packaging>
+    <modules>
+        <module>service-hi</module>
+    </modules>
 </project>
